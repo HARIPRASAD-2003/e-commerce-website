@@ -1,20 +1,5 @@
-:root {
-  --background-color-light: #f0f0f0; /* Light mode background color */
-  --background-color-dark: #333;    /* Dark mode background color */
-  --transition-duration: 0.3s;      /* Transition duration in seconds */
-}
-
-body.light-mode {
-  background-color: var(--background-color-light);
-  transition: background-color var(--transition-duration) ease-in-out;
-}
-
-body.dark-mode {
-  background-color: var(--background-color-dark);
-}
-
 .dark-mode {
-  background-color: grey; /* Dark mode background color */
+  background-color: rgb(0, 0, 0); /* Dark mode background color */
   color: #fff; /* Dark mode text color */
 }
 
