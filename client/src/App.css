@@ -1,90 +1,40 @@
-/* Global styles */
-body {
-  font-family: 'Your Preferred Font', sans-serif; /* Set your preferred font */
+:root {
+  --background-color-light: #f0f0f0; /* Light mode background color */
+  --background-color-dark: #333;    /* Dark mode background color */
+  --transition-duration: 0.3s;      /* Transition duration in seconds */
 }
 
-/* Basic styling for the navbar */
-.navbar {
-  background-color: #333;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Style for the logo container */
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-/* Style for the logo image */
-.logo img {
-  max-width: 100px; /* Adjust the maximum width of the logo as needed */
-  height: auto; /* Maintain aspect ratio */
-}
-
-/* Style for the navigation links */
-.links a {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px; /* Add some spacing between the links */
-  font-size: 16px;
-}
-
-/* Style for the active link */
-.links a:hover {
-  color: #66ccff; /* You can choose your own hover color */
-}
-
-/* Light mode styles */
 body.light-mode {
-  background-color: #fff;
-  color: #333;
+  background-color: var(--background-color-light);
+  transition: background-color var(--transition-duration) ease-in-out;
 }
 
-/* Dark mode styles */
 body.dark-mode {
+  background-color: var(--background-color-dark);
+}
+
+.dark-mode {
+  background-color: grey; /* Dark mode background color */
+  color: #fff; /* Dark mode text color */
+}
+
+.light-mode {
+  background-color: white; /* Light mode background color */
+  color: #333; /* Light mode text color */
+}
+
+/* Your CSS file or style section */
+footer {
   background-color: #333;
-  color: #fff;
-}
-
-/* Additional styles for your app components go here */
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  text-align: center;
+  padding: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+footer p {
+  margin: 0; /* Remove default margin for the paragraph inside the footer */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body{
+  height: 100%;
 }

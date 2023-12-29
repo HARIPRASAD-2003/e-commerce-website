@@ -1,0 +1,63 @@
+/* Assuming you have already imported the Font Awesome styles */
+/* You can include this in your existing CSS file */
+
+.navbar {
+    background-color: black;
+    /* padding: 10px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo{
+    /* display: flex;
+     */
+     padding: 5px;
+  }
+  .logo img {
+    padding-left: 20px;
+    max-width: 40px;
+    height: auto;
+  }
+  
+  .links {
+    display: flex;
+    align-items: center;
+  }
+  
+  form {
+    position: relative;
+  }
+  
+  input {
+    padding: 5px;
+    width: 300px;
+    margin-right: 10px;
+  }
+  
+  .search-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    cursor: pointer;
+  }
+  
+  .links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+  }
+
+  .links a:hover {
+    /* color: #66ccff; */
+    border: 2px solid white; /* Add a bottom border with 2px thickness */
+    padding: 2px;
+  }
+  
+  .mode-toggle{
+    background-color: transparent;
+    border: none;
+    padding-right: 20px;
+  }  

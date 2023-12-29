@@ -12,16 +12,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-body.light-mode {
-  background-color: #fff;
-  color: #333;
-}
-
-/* Styles for dark mode */
-body.dark-mode {
-  background-color: #333;
-  color: #fff;
-}
-
-/* Other styles for your components go here */
