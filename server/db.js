@@ -1,22 +1,29 @@
-// db.js
-const { Pool } = require('pg');
-const dotenv = require('dotenv');
+const mysql = require('mysql2');
+const fs = require('fs');
 
-dotenv.config();
-
-const pool = new Pool({
-  user: process.env.POSTGRES_USER,
-  host: process.env.POSTGRES_HOST,
-  database: process.env.POSTGRES_DATABASE,
-  password: process.env.POSTGRES_PASSWORD,
-  port: 5432, // Default PostgreSQL port
-  ssl: {
-    rejectUnauthorized: false, // Temporary workaround for self-signed certificates
-  },
-  sslmode: 'require', // Add this line to enforce SSL connection
-});
-
-module.exports = {
-  query: (text, params) => pool.query(text, params),
+var config =
+{
+    host: 'your_server_name.mysql.database.azure.com',
+    user: 'your_admin_name',
+    password: 'your_admin_password',
+    database: 'quickstartdb',
+    port: 3306,
+    ssl: {ca: fs.readFileSync("your_path_to_ca_cert_file_DigiCertGlobalRootCA.crt.pem")}
 };
 
+const conn = new mysql.createConnection(config);
+
+conn.connect(
+    function (err) {
+    if (err) {
+        console.log("!!! Cannot connect !!! Error:");
+        throw err;
+    }
+    else
+    {
+        console.log("Connection established.");
+        // queryDatabase();
+    }
+});
+
+export default conn;

@@ -8,7 +8,7 @@ import Products from './Pages/Products/Products';
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
 import LoadingScreen from './Components/LoadingScreen/LoadingScreen';
-
+import Login from './Pages/Auth/LoginPage';
 function App() {
 if ('history' in window && 'scrollRestoration' in window.history) {
   window.history.scrollRestoration = 'manual';
@@ -49,6 +49,7 @@ if ('history' in window && 'scrollRestoration' in window.history) {
                 <Route path="/about" element={<About />} />
                 <Route path="/products" element={<Products />} />
                 <Route path="/search/:id" element={<Products />} />
+                <Route path="/login" element={<Login />}/>
               </Routes>
             </CSSTransition>
           </TransitionGroup>

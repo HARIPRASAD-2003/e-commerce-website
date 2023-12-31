@@ -18,7 +18,7 @@ body::-webkit-scrollbar-thumb {
 
 body {
   /* Optional: Add padding to compensate for the scrollbar width */
-  padding-right: 0.5em;
+  /* padding-right: 0.5em; */
   /* Enable scrolling */
   overflow-y: scroll;
 }

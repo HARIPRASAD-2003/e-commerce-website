@@ -5,6 +5,7 @@ import prd1 from '../../assets/png/logo-white.png';
 import prd2 from '../../assets/png/logo-black.png';
 import prd3 from '../../assets/png/logo-color.png';
 import Card from '../../Components/Card/Card';
+import Slider from '../../Components/Slider/Slider';
 // import { Navigate } from 'react-router';
 
 const Home = () => {
@@ -88,6 +89,7 @@ const Home = () => {
 
   return (
     <div>
+      <Slider />
       <section className="featured-products">
         {/* Left arrow */}
         <div className='fp'>
