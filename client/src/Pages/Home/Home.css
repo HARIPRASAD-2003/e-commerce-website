@@ -1,0 +1,148 @@
+/* Home.css */
+
+/* Reset some default styles for better consistency */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    /* background-color: #f8f8f8; */
+    /* color: #333; */
+  }
+  
+  /* Global container styles */
+  
+  
+  /* Featured products section styling */
+  .featured-products {
+    margin: 20px;
+    overflow: hidden;
+    /* height: 700px; */
+  }
+  
+  .fp{
+    height: 700px;
+    /* position: relative; */
+  }
+  
+  .dot-presentation {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .active-dot {
+    background-color: #555; /* Change the color for the active dot */
+  }
+  .product {
+    display: none;
+    height: 700px;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+    /* color: #fff; */
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .product.visible {
+    display: block;
+    opacity: 1;
+  }
+  
+  .product-details {
+    position: absolute;
+    padding: 20px;
+    color: red;
+    bottom: 20px;
+    left: 45%;
+  }
+
+  .product-details p{
+    font-size: xx-large;
+  }
+
+  .product-details.visible{
+    display: block;
+  }
+  
+  h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  /* Arrows styling */
+  .arrow {
+    position: absolute;
+    height: 79%;
+    width: 10%;
+    /* top: 50%; */
+    font-size: 24px;
+    color: transparent;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 1;
+  }
+  
+  .left-arrow {
+    left: 1.5%;
+  }
+  
+  .right-arrow {
+    right: 2%;
+  }
+  
+  /* .arrow:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: whitesmoke;
+  } */
+  
+/* Add this to the existing CSS */
+.rp h3{
+    margin: 20px;
+}
+.recommended-products {
+    margin: 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+}
+
+.rec-prd {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    gap: 10px; /* Adjust the gap between cards as needed */
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* scroll-snap-align: start; */
+}
+/* Add this to your existing CSS */
+
+/* Hide scrollbar for Chrome, Safari, and Edge */
+.recommended-products::-webkit-scrollbar,
+.rec-prd::-webkit-scrollbar{
+    display: none;
+}

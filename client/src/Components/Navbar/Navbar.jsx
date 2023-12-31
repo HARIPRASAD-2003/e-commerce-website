@@ -28,10 +28,14 @@ const Navbar = ({mode, setMode}) => {
       <div className='links'>
         <form onSubmit={handleSubmit}>
           <input type='text' value={query} onChange={(e) => { setQuery(e.target.value) }} placeholder='Search...'/>
-          <FontAwesomeIcon icon={faSearch} className='search-icon' />
+          <FontAwesomeIcon icon={faSearch} className='search-icon' onClick={handleSubmit}/>
         </form>  
         <Link to="/about">About</Link>
         <Link to="/products">Products</Link>
+        <div className='login-signup'>
+          <button onClick={()=>navigate('/login')}>Login</button>
+          <button onClick={()=>navigate('/signup')}>Sign Up</button>
+        </div>
         <div className='mode-toggle' onClick={() => setMode(!mode)}>
           {mode ? <FontAwesomeIcon icon={faSun} /> : <FontAwesomeIcon icon={faMoon} />}
         </div>

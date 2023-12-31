@@ -3,6 +3,9 @@
 
 .navbar {
     background-color: black;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
     /* padding: 10px; */
     display: flex;
     justify-content: space-between;
@@ -61,4 +64,38 @@
     background-color: transparent;
     border: none;
     padding-right: 20px;
+    padding-left: 20px;
   }  
+
+  .login-signup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center items vertically within the container */
+    /* padding: 2px; Add some padding for better spacing */
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: transparent; /* Add a background color for a subtle look */
+    border-radius: 8px; /* Add rounded corners for a modern appearance */
+}
+
+.login-signup > * {
+    flex: 1; /* Distribute available space evenly between child elements */
+    margin: 0 1px; /* Add margin between child elements for better readability */
+}
+
+/* You can add additional styling for child elements if needed */
+.login-signup button {
+    background-color: red;
+    text-wrap: nowrap;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-signup button:hover {
+    background-color: #2980b9;
+}
+

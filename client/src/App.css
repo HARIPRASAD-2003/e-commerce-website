@@ -7,6 +7,21 @@
   background-color: white; /* Light mode background color */
   color: #333; /* Light mode text color */
 }
+/* Hide the default scrollbar */
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+body {
+  /* Optional: Add padding to compensate for the scrollbar width */
+  padding-right: 0.5em;
+  /* Enable scrolling */
+  overflow-y: scroll;
+}
 
 /* Your CSS file or style section */
 footer {
@@ -16,10 +31,38 @@ footer {
   padding: 5px;
 }
 
+.invis{
+  padding: 40px;
+}
+
 footer p {
   margin: 0; /* Remove default margin for the paragraph inside the footer */
 }
 
 body{
   height: 100%;
+}
+
+/* Add these styles to your existing CSS file */
+/* Add these styles to your existing CSS file */
+.fade-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms ease-in, transform 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms ease-in, transform 300ms ease-in;
 }
