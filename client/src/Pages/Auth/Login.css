@@ -1,62 +1,94 @@
 /* Login.css */
 
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
 .login-page {
-  height: 98vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.login-container {
+  display: flex;
+  width: 100%;
+}
+
+.image-container,
+.login-form {
+  flex: 1;
+  padding: 20px;
+}
+
+.image-container, .login-form {
+  /* background-color: #f0f0f0; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.login-container {
-  display: flex;
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.dark-mode .login-container {
-  background-color: gray;
-}
-
-.image-container {
-  flex: 1;
-}
-
 .image-container img {
-  width: 100%; /* Adjust the width as needed */
-  height: auto; /* Maintain aspect ratio */
+  max-width: 100%;
+  height: auto;
 }
 
 .login-form {
-  flex: 1;
-  padding-left: 20px; /* Adjust spacing between image and form */
+  
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form form {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 h2 {
   text-align: center;
 }
 
-form {
+.form-group {
   display: flex;
   flex-direction: column;
-}
-
-label {
-  margin-bottom: 5px;
+  position: relative;
 }
 
 input {
-  padding: 10px;
-  margin-bottom: 10px;
+  height: 25px;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 5px;
 }
 
-button {
-  background-color: red;
+label {
+  font-weight: bold;
+}
+
+.password-input {
+  position: relative;
+}
+
+.login-form button {
   padding: 10px;
-  cursor: pointer;
+  background-color: red;
+  color: #fff;
   border: none;
-  border-radius: 3px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.eye-icon {
+  position: absolute;
+  color: black;
+  right: 20px;
+  top: 60%;
+  transform: translateY(-50%);
+  cursor: pointer;
 }

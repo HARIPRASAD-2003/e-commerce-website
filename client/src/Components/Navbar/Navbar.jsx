@@ -19,6 +19,7 @@ const Navbar = ({mode, setMode}) => {
     e.preventDefault();
     handleSearch();
   };
+  
 
   return (
     <nav className='navbar'>
@@ -26,10 +27,12 @@ const Navbar = ({mode, setMode}) => {
         <Link to="/"><img src={logo} alt='' /></Link>
       </div>
       <div className='links'>
-        <form onSubmit={handleSubmit}>
-          <input type='text' value={query} onChange={(e) => { setQuery(e.target.value) }} placeholder='Search...'/>
-          <FontAwesomeIcon icon={faSearch} className='search-icon' onClick={handleSubmit}/>
-        </form>  
+        <div className='search'>
+          <form onSubmit={handleSubmit} >
+            <input type='text' value={query} onChange={(e) => { setQuery(e.target.value) }} placeholder='Search...'/>
+            <FontAwesomeIcon icon={faSearch} className='search-icon' onClick={handleSubmit}/>
+          </form>  
+        </div>
         <Link to="/about">About</Link>
         <Link to="/products">Products</Link>
         <div className='login-signup'>

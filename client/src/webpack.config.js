@@ -1,0 +1,4 @@
+resolve: {
+    fallback: { buffer: false }
+  }
+  

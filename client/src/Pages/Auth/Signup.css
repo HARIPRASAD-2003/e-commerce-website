@@ -1,0 +1,93 @@
+/* Signup.css */
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .signup-page {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+  }
+  
+  .signup-container {
+    display: flex;
+    width: 100%;
+  }
+  
+  .image-container,
+  .signup-form {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .image-container,
+  .signup-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .signup-form {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .signup-form form {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  input {
+    height: 25px;
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  .password-input {
+    position: relative;
+  }
+  
+  .signup-form button {
+    padding: 10px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .eye-icon {
+    position: absolute;
+    color: black;
+    right: 20px;
+    top: 60%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  

@@ -6,7 +6,7 @@
     position: fixed;
     z-index: 10;
     width: 100%;
-    height: 50px;
+    height: 60px;
     /* padding: 10px; */
     display: flex;
     justify-content: space-between;
@@ -30,7 +30,7 @@
     align-items: center;
   }
   
-  form {
+.navbar  form {
     position: relative;
     display: flex;
     align-items: center;
@@ -48,10 +48,15 @@
     /* top: 50%; */
   }
   
+  .search{
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+  }
   .search-icon {
     position: absolute;
     right: 20px;
-    top: 50%;
+    top: 60%;
     transform: translateY(-50%);
     color: black;
     cursor: pointer;
