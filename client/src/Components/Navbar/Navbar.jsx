@@ -4,6 +4,7 @@ import { faSearch, faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import logo from '../../logo-color.png';
 import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
+import Avatar  from '../Avatar/Avatar';
 import "./Navbar.css"
 
 const Navbar = ({mode, setMode}) => {
@@ -35,10 +36,10 @@ const Navbar = ({mode, setMode}) => {
         </div>
         <Link to="/about">About</Link>
         <Link to="/products">Products</Link>
-        <div className='login-signup'>
+        {(false)?<div className='login-signup'>
           <button onClick={()=>navigate('/login')}>Login</button>
           <button onClick={()=>navigate('/signup')}>Sign Up</button>
-        </div>
+        </div>:<Avatar/>}
         <div className='mode-toggle' onClick={() => setMode(!mode)}>
           {mode ? <FontAwesomeIcon icon={faSun} /> : <FontAwesomeIcon icon={faMoon} />}
         </div>

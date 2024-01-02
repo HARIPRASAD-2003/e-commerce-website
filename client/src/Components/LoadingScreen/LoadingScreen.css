@@ -22,18 +22,17 @@
     align-items: center;
   }
   
-  .loading-spinner {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 4px solid #e50914;
-    border-top: 4px solid transparent;
-    animation: spin 1.2s linear infinite;
-  }
-  
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+  }
+  @keyframes zoomIn {
+    100% {
+      transform: scale(0);
+    }
+    0% {
+      transform: scale(100);
+    }
   }
   
   .loading-text {
@@ -41,4 +40,9 @@
     font-size: 18px;
     margin-top: 10px;
   }
-  
+  .loading-screen img {
+    width: 80%;
+    height: 80%;
+    animation: spin 1s  infinite;
+    animation: spin 1s infinite, zoomIn 1s ease-out;
+  }

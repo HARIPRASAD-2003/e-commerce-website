@@ -1,0 +1,10 @@
+.avt-image img {
+position: relative;
+width: 100%;
+max-width: 40px;
+}
+.avatar-name p{
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+}
