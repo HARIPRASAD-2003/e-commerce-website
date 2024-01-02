@@ -79,7 +79,7 @@ const Login = () => {
         throw new Error('login failed:' + errorData.message);
       }
     } catch (error) {
-      alert('userlogin:', error);
+      alert('userlogin:', error.message);
     }
   }
   const handleUserLogin = (e) => {
