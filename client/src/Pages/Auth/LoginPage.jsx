@@ -45,7 +45,7 @@ const Login = () => {
         throw new Error('Signup failed:' + errorData.message);
       }
     } catch (error) {
-      alert('userlogin:', error);
+      alert('userlogin:', error.message);
     }
   }
 
