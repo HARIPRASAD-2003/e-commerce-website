@@ -112,4 +112,6 @@
 .login-signup button:hover {
     background-color: #2980b9;
 }
-
+.Avatar{
+  position: flex;
+}
